@@ -28,6 +28,7 @@ body {
     width: auto;
     height: auto;
 }
+
 /* nav bar */
 .header {
     position: fixed;
@@ -81,18 +82,21 @@ body {
     color: var(--main-color);
     display: none;
     cursor: pointer;
-} 
+}
 
 section {
     min-height: 100vh;
     padding: 10rem 12%;
 }
+
 /* Home design */
 .home {
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 15rem;
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
 }
 
 .home-content {
@@ -103,13 +107,14 @@ section {
     justify-content: center;
     margin-top: 3rem;
 }
+
 .home-sci {
     position: flex;
-    
+
     width: 100px;
     display: flex;
     justify-content: space-between;
-    margin-top: 1.5rem;    
+    margin-top: 1.5rem;
 }
 
 .home-sci a {
@@ -128,6 +133,7 @@ section {
     overflow: hidden;
     transition: .5s;
     text-decoration: none;
+    
 }
 
 .home-sci a:hover {
@@ -169,7 +175,7 @@ span {
     border-radius: 50%;
     box-shadow: 0 0 25px var(--main-color);
     cursor: pointer;
-    transition: 0.4s ease-in-out;  
+    transition: 0.4s ease-in-out;
 }
 
 .home-content p {
@@ -178,11 +184,12 @@ span {
     line-height: 1.8;
     max-width: 1000px;
 }
+
 .btn {
     display: inline-block;
     padding: 1rem 2.8rem;
     background: var(--main-color);
-    box-shadow: 0 0 25px var(--main-color);
+    box-shadow: 0 0 10px var(--main-color);
     border-radius: 4rem;
     font-size: 1.6rem;
     color: black;
@@ -202,6 +209,87 @@ span {
     display: flex;
     align-items: center;
     gap: 1.5rem;
+}
+
+/* about */
+.about {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 2rem;
+    background: var(--bg-color);
+    padding-bottom: 0rem;
+    margin-top: 0rem;
+    
+}
+
+.heading {
+    font-size: 60px;
+    margin-bottom: 1rem;
+    text-align: center;
+    margin-top: 0;
+}
+
+span {
+    color: var(--main-color);
+}
+
+.about-img {
+    position: relative;
+    box-shadow: 0 0 25px var(--main-color);
+    width: 15rem;
+    height: 15rem;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-img img {
+    width: 90%;
+    border-radius: 50%;
+    border: .2rem solid var(--main-color);
+}
+
+.about-img .circle-spin {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(0);
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    border-top: .2rem solid var(--second-bg-color);
+    border-bottom: .2rem solid var(--second-bg-color);
+    border-left: .2rem solid var(--main-color);
+    border-right: .2rem solid var(--main-color);
+}
+
+.about-content {
+    text-align: center;
+    margin-top: 10px;
+
+}
+
+.about-content h3 {
+    font-size: 2rem;
+
+}
+
+.about-content p {
+    font-size: 1.2rem;
+    margin: 2rem 0 3rem;
+}
+
+.btn-box.btns {
+    display: inline-block;
+    width: 25rem;
+    margin-top: 0.1rem;
+}
+
+.btn-box.btns a::before {
+    background: var(--second-bg-color);
 }
 
 /* Responsive styles */
@@ -271,23 +359,32 @@ span {
         font-size: 2.8rem;
     }
 }
+
 /* education */
 
-.education{
-    padding: 100px 15px;
+.education {
+    padding: 50px 15px;
     background: var(--bg-color);
-    
+    /* margin-top: 1rem; */
+    justify-content: center;
+    text-align: center;
 }
-.education h2{
+
+.education h2 {
     margin-top: 5rem;
 }
-.timeline-date{
+
+.timeline-date {
     font-size: 20px;
     font-weight: 800;
     color: white;
-    margin: 6px 0 15px 25px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    text-align: center;
+    justify-content: center;
 }
-.timeline-content{
+
+.timeline-content {
     background-color: var(--bg-color);
     border: 3px solid var(--main-color);
     padding: 30px 50px;
@@ -296,92 +393,19 @@ span {
     cursor: pointer;
     transition: 0.3s ease-in-out;
 }
-.timeline-content:hover{
+
+.timeline-content:hover {
     transform: scale(1.05);
     box-shadow: 0 0 25px;
 }
 
-/* about */
-.about {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    gap: 2rem;
-    background: var(--bg-color);
-    padding-bottom: 15rem;
-    margin-top: 10rem;
-}
 
-.heading {
-    font-size: 3rem;
-    margin-bottom: 1rem;
-    text-align: center;
-    margin-top: 0;
-}
-
-span {
-    color: var(--main-color);
-}
-
-.about-img {
-    position: relative;
-    box-shadow: 0 0 25px var(--main-color);
-    width: 15rem;
-    height: 15rem;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.about-img img {
-    width: 90%;
-    border-radius: 50%;
-    border: .2rem solid var(--main-color);
-}
-
-.about-img .circle-spin {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%) rotate(0);
-    width: 100%;
-    height: 100%;
-    border-radius: 50%;
-    border-top: .2rem solid var(--second-bg-color);
-    border-bottom: .2rem solid var(--second-bg-color);
-    border-left: .2rem solid var(--main-color);
-    border-right: .2rem solid var(--main-color);
-}
-
-.about-content {
-    text-align: center;
-    margin-top: 10px;
-    
-}
-
-.about-content h3 {
-    font-size: 2rem;
-    
-}
-
-.about-content p {
-    font-size: 1.2rem;
-    margin: 2rem 0 3rem;
-}
-
-.btn-box.btns {
-    display: inline-block;
-    width: 25rem;
-    margin-top: 0.1rem;
-}
-
-.btn-box.btns a::before {
-    background: var(--second-bg-color);
-}
 
 /* skills */
+.skills{
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+}
 
 .sub-title {
     text-align: center;
@@ -437,15 +461,19 @@ span {
     width: 10rem;
     justify-content: space-around;
 }
+
 .icon {
     height: 1rem;
     width: 1rem;
     border-radius: 50%;
 }
+
 /* contact */
 .content {
     min-height: auto;
     padding-bottom: 7rem;
+    padding-top: 0rem;
+    margin-top: 0rem;
 }
 
 .contact form {
@@ -488,7 +516,7 @@ span {
 /* footer */
 .footer {
     display: flex;
-    justify-content:center;
+    justify-content: center;
     align-items: center;
     flex-wrap: wrap;
     padding: 0.1rem 9%;
@@ -544,4 +572,3 @@ span {
 .footer-iconsTop a:hover i {
     color: var(--main-color);
 }
-
